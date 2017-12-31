@@ -25,6 +25,7 @@ class TeamsController < ApplicationController
   # POST /teams.json
   def create
     @team = Team.new(team_params)
+    @team.team_users.new(user: current_user, role: "owner")
 
     respond_to do |format|
       if @team.save
