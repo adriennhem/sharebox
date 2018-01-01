@@ -10,6 +10,7 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
+    @folders = @team.folders.all
   end
 
   # GET /teams/new
@@ -51,6 +52,8 @@ class TeamsController < ApplicationController
       end
     end
   end
+
+
 
   # DELETE /teams/1
   # DELETE /teams/1.json

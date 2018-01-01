@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :teams
+  
+  resources :teams do 
+  	resources :folders
+  end
   resources :assets
   devise_for :users
   root 'pages#index'

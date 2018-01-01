@@ -1,14 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to 'Familly Cloud', root_path, class: 'navbar-brand' %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+<nav class="navbar navbar-expand-lg navbar-dashboard">
+    <%= link_to 'Familly Cloud', root_path, class: 'navbar-brand' %>
+    <ul class="nav ml-auto">
       <li class="nav-item">
-        <%= link_to 'Sign In', new_user_session_path %>
+      <% if user_signed_in? %>
+        <%= link_to 'Log Out', destroy_user_session_path, class: "nav-link", method: :delete %>
+      <% else %>
+        <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+      <% end %>       
+      </li>
+      <li class="nav-item">
+        <%= link_to 'My Settings', edit_user_registration_path, class: "nav-link" %>
       </li>
     </ul>
-  </div>
 </nav>

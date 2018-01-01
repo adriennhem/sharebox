@@ -39,6 +39,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.3.8)
+    ancestry (3.0.1)
+      activerecord (>= 3.2.0)
     arel (8.0.0)
     autoprefixer-rails (7.2.3)
       execjs
@@ -214,6 +216,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   bootstrap (~> 4.0.0.beta3)
   byebug
   capybara (~> 2.13)
