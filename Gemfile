@@ -35,6 +35,7 @@ gem 'ancestry'
 
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
 
 
 # Use Capistrano for deployment
