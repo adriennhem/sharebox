@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :teams do 
   	resources :folders
   end
-  resources :assets
+  resources :items
   devise_for :users
   root 'pages#index'
 

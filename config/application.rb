@@ -15,6 +15,5 @@ module Sharebox
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.filestack_rails.api_key = "Ar0DfboRKSb2yoyIcYFYOz"
-	config.filestack_rails.client_name = "my cloud app"
   end
 end
