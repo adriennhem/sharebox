@@ -1,5 +1,13 @@
 <div class="sidebar-height">
 <ul class="nav sidebar">
+
+    <li class="nav-item pt-3">
+    <% if user_signed_in? and current_user.teams.exists? %>
+        <%= link_to 'My Team', team_path(current_user.teams.last), class: "nav-link" %>  
+    <% end %>
+    </li>
+    
+
     <li class="nav-item pt-3">
       <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
  Personal</a>     
