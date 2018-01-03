@@ -3,6 +3,15 @@
 
 <%= link_to 'Add file', new_item_path %>
 
+<h4>Invite User</h4>
+<%= form_for [@team, TeamUser.new] do |f| %>
+  <div>
+    <%= f.text_field :email, required: true %>
+  </div>
+  <%= f.submit "Invite" %>
+<%  end %>
+
+
 <div class="jumbotron mx-auto mt-3">
   <h1 class="display-4">Hello, world!</h1>
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>

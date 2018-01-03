@@ -1,17 +1,13 @@
 Rails.application.routes.draw do
-  
+  root 'pages#index'
+  devise_for :users
+
   resources :teams do 
-  	resources :folders
+    get 'contacts', to: 'teams#contact'
+  	resources :team_users, path: :users, module: :teams
   end
-  
+
   resource :subscription
   resource :card
-
-
-
   resources :items
-  devise_for :users
-  root 'pages#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

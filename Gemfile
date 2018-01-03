@@ -32,8 +32,8 @@ gem 'stripe'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'devise_invitable'
 gem 'filestack-rails', require: 'filestack-rails'
-gem 'ancestry'
 
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'jquery-rails'
