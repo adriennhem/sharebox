@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :teams do 
   	resources :folders
   end
+  
+  resource :subscription
+
   resources :items
   devise_for :users
   root 'pages#index'
