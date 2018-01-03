@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resource :card
 
 
+
   resources :items
   devise_for :users
   root 'pages#index'
