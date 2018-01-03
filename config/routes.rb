@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
   
   resource :subscription
+  resource :card
+
 
   resources :items
   devise_for :users
