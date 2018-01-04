@@ -1,2 +1,10 @@
 <h1>Pages#index</h1>
 <p>Find me in app/views/pages/index.html.erb</p>
+
+ <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, class: "nav-link", method: :delete do %>
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out
+      <% end %>
+    <% else %>
+      <%= link_to 'Sign In', new_user_session_path, class: "nav-link" %>
+    <% end %>       

@@ -1,4 +1,14 @@
-  <h4>Users</h4>
+<h2 class="pt-3">Familly Members</h2>
+
   <% @team.users.each do |user| %>
     <div><%= user.email %></div>
   <% end %>
+
+
+  <h4>Invite User</h4>
+<%= form_for [@team, TeamUser.new] do |f| %>
+  <div>
+    <%= f.text_field :email, required: true %>
+  </div>
+  <%= f.submit "Invite" %>
+<%  end %>

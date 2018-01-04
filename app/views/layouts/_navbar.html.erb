@@ -3,7 +3,7 @@
     <ul class="nav ml-auto">
       <% if user_signed_in? && !current_user.subscribed? %>
        <li class="nav-item"> 
-        <%= link_to 'Upgrade Your Account', new_subscription_path, class: "btn btn-primary nav-button" %>
+        <%= link_to 'Upgrade Your Account', new_subscription_path, class: "btn btn-primary nav-button", data: { turbolinks: false } %>
       </li> 
       <% end %>
 

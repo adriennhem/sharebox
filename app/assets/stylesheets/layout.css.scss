@@ -11,7 +11,7 @@
 }
 
 .dashboard {
-	background: #000;
+	background: #F8F7F7;
 }
 
 .jumbotron {
@@ -19,9 +19,17 @@
 }
 
 .sidebar {
+	height: 100vh;
+	border-right: 2px solid #F5F5F5;
 }
 
-.sidebar-height {
-	height: 90vh;
-	border-right: 1px solid #eee;
+.fa {
+	color: #997CEC;
+	font-size: 1.5em !important;
 }
+
+.sidebar a.nav-link {
+	color: #949494;
+	font-weight: 100;
+}
+

@@ -1,36 +1,31 @@
-<div class="sidebar-height">
-<ul class="nav sidebar">
+<ul class="nav">
 
     <li class="nav-item pt-3">
     <% if user_signed_in? and current_user.teams.exists? %>
-        <%= link_to 'My Team',  team_contacts_path(@team), class: "nav-link" %>  
+        <%= link_to team_path(current_user.teams.last), class: "nav-link" do %> 
+        <i class="fa fa-home" aria-hidden="true"></i> Home
+        <% end %> 
     <% end %>
     </li>
 
     <li class="nav-item pt-3">
-      <%= link_to 'Contacts',  team_team_users_path(@team) %>
+    <% if user_signed_in? and current_user.teams.exists? %>
+        <%= link_to team_contacts_path(current_user.teams.last), class: "nav-link" do %>  
+        <i class="fa fa-address-book-o" aria-hidden="true"></i> Contacts
+        <% end %>
+    <% end %>
     </li>
-    
 
     <li class="nav-item pt-3">
-      <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
- Personal</a>     
+      <%= link_to edit_user_registration_path, class: "nav-link" do %>
+      <i class="fa fa-cog" aria-hidden="true"></i> Settings
+      <% end %>
     </li>
-    <li class="nav-item pt-3">
-      <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-Financial Accounts</a>     
+   
+     <li class="nav-item pt-3">
+      <%= link_to destroy_user_session_path, class: "nav-link", method: :delete do %>
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Sign Out
+      <% end %>    
     </li>
-    <li class="nav-item pt-3">
-      <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-Financial Papers</a>     
-    </li>
-    <li class="nav-item pt-3">
-      <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-Medical & Insurance</a>     
-    </li>
-    <li class="nav-item pt-3">
-      <a href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i>
-Personal Documents</a>     
-    </li>
+
 </ul>
-</div>

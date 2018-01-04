@@ -47,8 +47,6 @@ class TeamsController < ApplicationController
     end
   end
 
-
-
   # DELETE /teams/1
   # DELETE /teams/1.json
   def destroy
@@ -65,7 +63,7 @@ class TeamsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_team
-      @team = current_user.teams.find(params[:id])
+      @team = current_user.teams.last
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
