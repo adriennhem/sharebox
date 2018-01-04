@@ -2,6 +2,7 @@
 
   <% @team.users.each do |user| %>
     <div><%= user.email %></div>
+    <div><%= link_to 'Edit', edit_user_registration_path(user) %></div>
   <% end %>
 
 
