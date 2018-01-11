@@ -33,3 +33,30 @@
 	font-weight: 100;
 }
 
+/* Settings */
+
+.container-settings-color {
+	background: #FFF;
+	border: 2px solid #F5F5F5;
+}
+
+.container-settings-color .form-control {
+	max-width: 20%;
+}
+
+/* Buttons */
+
+.btn-orange {
+	background: #FA9E9C;
+}
+
+.active {
+	background: #E5D4E4;
+}
+
+
+/* Ttitles */
+
+.title-header {
+	border-bottom: 2px solid #F5F5F5;
+}

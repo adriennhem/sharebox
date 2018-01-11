@@ -4,13 +4,15 @@
       <%= link_to 'Sharebox', root_path, class: "navbar-brand nav-link" %>
     </li>
 
-    <li class="nav-item pt-3">
+    
     <% if user_signed_in? and current_user.teams.exists? %>
+    <li class="nav-item pt-3 <%= 'active' if current_page?(team_path(current_user.teams.last)) %>">
         <%= link_to team_path(current_user.teams.last), class: "nav-link" do %> 
         <i class="fa fa-home" aria-hidden="true"></i> Home
         <% end %> 
+        </li>
     <% end %>
-    </li>
+    
 
     <li class="nav-item pt-3">
     <% if user_signed_in? and current_user.teams.exists? %>
